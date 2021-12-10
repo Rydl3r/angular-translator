@@ -1,0 +1,100 @@
+$glass: rgba(255, 255, 255, 0.2);
+$glass-icon: rgba(255, 255, 255, 0.3);
+$gradient: linear-gradient(35deg, red, purple);
+$option: #320a28;
+
+
+
+.container {
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 48px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    span {
+        color: yellow
+    }
+}
+
+.workspace {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.translate_button {
+    height: 50px;
+    border-radius: 0.25em;
+    border: none;
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    transition: all 0.2s ease;
+    &:hover {
+        cursor: pointer;
+        background: yellow;
+        color: white;
+    }
+}
+
+.from, .to {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+select {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    height: 3em;
+    padding: 0 4em 0 1em;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+        no-repeat right 0.8em center / 1.4em,
+      linear-gradient(to left, $glass-icon 3em, $glass 3em);
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+    option {
+      color: inherit;
+      background-color: $option;
+    }
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+    }
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+.from_input, .translated_text {
+    border-radius: 0.25em;
+    padding: 10px;
+    padding-bottom: 200px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    background-color: white;
+    color: black;
+    text-align:initial;
+
+}

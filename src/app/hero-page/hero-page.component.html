@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="title">
+        Welcome to <span>your</span> translator
+    </div>
+    <form class="workspace" [formGroup]="translatorForm" (ngSubmit)="translate()">
+        <div class="from">
+            <select class="languages" formControlName="fromLanguage">
+                <option [value]="lang.language" *ngFor="let lang of languagesList">
+                    {{getLanguageFullname(lang.language) && getLanguageFullname(lang.language).length > 1 ?
+                    getLanguageFullname(lang.language) :
+                    lang.language}}
+                </option>
+            </select>
+            <input type="text" class="from_input" formControlName="fromText" required placeholder="Input some text">
+        </div>
+        <button type="submit" [disabled]="!translatorForm.valid" class="translate_button">Translate</button>
+        <div class="to">
+            <select class="languages" required formControlName="toLanguage">
+                <option [value]="lang.language" *ngFor="let lang of languagesList">
+                    {{getLanguageFullname(lang.language) && getLanguageFullname(lang.language).length > 1 ?
+                    getLanguageFullname(lang.language) :
+                    lang.language}}
+                </option>
+            </select>
+            <div class="translated_text">{{translatedText}}</div>
+        </div>
+    </form>
+</div>
