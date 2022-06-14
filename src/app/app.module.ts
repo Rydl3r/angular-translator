@@ -7,21 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroPageComponent } from './hero-page/hero-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeroPageComponent
-  ],
+  declarations: [AppComponent, HeroPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
